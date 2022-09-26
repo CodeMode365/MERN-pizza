@@ -2,15 +2,24 @@ import React, { useState } from "react";
 // import PizzaView from "./PizzaView";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../Redux/Actions/CartOperation";
 
 const Pizza = ({ data }) => {
-  const [Quanttity, setQuantity] = useState(1);
+  const [Quantity, setQuantity] = useState(1);
   const [Varient, setVarient] = useState("small");
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
 
   const handleShow = () => setShow(true);
+
+  const dispatch = useDispatch();
+
+  const addInCart = () => {
+    // alert(`${Quantity} ${data.name}  Ordered`);
+    dispatch(addToCart(data, Quantity, Varient));
+  };
 
   return (
     <div className=" d-flex flex-column text-light bg-dark align-items-center pb-3 mb-4 pizzaBox overflow-hidden shadow-lg">
@@ -36,7 +45,7 @@ const Pizza = ({ data }) => {
           >
             {data.varients.map((variant, index) => {
               return (
-                <option value={variant} key={index*45}>
+                <option value={variant} key={index * 45}>
                   {variant}
                 </option>
               );
@@ -45,17 +54,17 @@ const Pizza = ({ data }) => {
         </div>
         <div>{/* <PizzaView className="translate-middle-y-5" /> */}</div>
         <div>
-          <p>Quanttity</p>
+          <p>Quantity</p>
           <select
             className="w-75 text-sm-center selecttion"
-            value={Quanttity}
+            value={Quantity}
             onChange={(e) => {
               setQuantity(e.target.value);
             }}
           >
-            {[...Array(10).keys()].map((qty,index) => {
+            {[...Array(10).keys()].map((qty, index) => {
               return (
-                <option value={qty} key={index*1415}>
+                <option value={qty} key={index * 1415}>
                   {qty}
                 </option>
               );
@@ -68,13 +77,16 @@ const Pizza = ({ data }) => {
           <p>
             Price:{" "}
             <span className="price">
-              Rs. {data.prices[Varient] * Quanttity} /-
+              Rs. {data.prices[Varient] * Quantity} /-
             </span>
           </p>
         </div>
         <div className="">
           <p>
-            <button className="btn btn-danger border-0 mb-1 mt-1 text-light rounded s text-light Order">
+            <button
+              className="btn btn-danger border-0 mb-1 mt-1 text-light rounded s text-light Order"
+              onClick={addInCart}
+            >
               Order Now
             </button>
           </p>

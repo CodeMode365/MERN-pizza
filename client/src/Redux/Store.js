@@ -4,12 +4,24 @@ import { createStore, applyMiddleware } from "redux";
 
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
-import { getAllPizzas } from "./Reducers/Opeartions";
+import { getAllPizzas } from "./Reducers/DbOpeartions";
+import { Cart } from "./Reducers/CartOperation";
 
 const finalReducer = combineReducers({
   getAllPizzas: getAllPizzas,
+  Cart: Cart,
 });
-const initialState = {};
+
+//check cart data in localStorage
+const cartItems = localStorage.getItem("cartItems")
+  ? JSON.parse(localStorage.getItem("cartItems"))
+  : [];
+//Initialize the localStorages
+const initialState = {
+  Cart: {
+    cartItems: cartItems,
+  }
+};
 const composeEnhancer = composeWithDevTools({});
 
 const store = createStore(

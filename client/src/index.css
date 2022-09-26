@@ -3,6 +3,9 @@
 * {
   font-family: "Montserrat", sans-serif;
 }
+body{
+  background-color: #585859;
+}
 .nav-link {
   color: black;
   /* font-size: 2rem; */
@@ -13,12 +16,12 @@
 #cart::before {
   content: attr(count);
   text-align: center;
-  color: white;
+  color: rgb(237, 194, 194);
   height: 90%;
-  min-width: 80%;
+  min-width: 90%;
   right: -25px;
   top: -10px;
-  background-color: rgb(86, 86, 71);
+  background-color: rgb(58, 58, 52);
   border-radius: 50%;
   position: absolute;
 }
@@ -89,4 +92,7 @@ input{
 }
 .loginEle{
   /* background:black; */
+}
+.pointer{
+  cursor:pointer;
 }
