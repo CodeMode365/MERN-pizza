@@ -1,12 +1,18 @@
 const express = require("express");
 const db = require("./connect");
-// const cors = require('cors')
+const cors = require('cors')
 
 //import the pizza modal
 const Pizza = require("./Modal/Pizza.Modal");
 const app = express();
 
-// app.options("*", cors())
+app.options("*", cors())
+
+const corsOptions = {
+  origin:"http://127.0.0.1:5173"
+}
+
+app.use(cors(corsOptions))
 
 //Route
 const PizzaRoute = require("./Routes/Pizzas");
