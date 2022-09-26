@@ -1,0 +1,75 @@
+const Pizzas = [
+  {
+    id: 3231,
+    name: "Chicken Pizza",
+    varients: ["small", "medium", "large"],
+    prices: { small: 200, medium: 350, large: 400 },
+    category: "nonveg",
+    image:
+      "https://media.istockphoto.com/photos/butter-chicken-pizza-picture-id1043604390?b=1&k=20&m=1043604390&s=612x612&w=0&h=XuBOH3xTEm2JlWzyPj6KdjeKcDwgO3dWpBP70crM1L0=",
+    description: "lorem iplus is the this is the random text and you might want to add the detils of the pizza here. Like you can add the ingrediants or something about the pizza that might attract the clients with your pizza. Chicken pizza with cheese doping over",
+  },
+  {
+    id: 432,
+    name: "Veg Pizza",
+    varients: ["small", "medium", "large"],
+    prices: { small: 200, medium: 350, large: 400 },
+    category: "veg",
+    image:
+      "https://media.istockphoto.com/photos/small-pizza-with-chicken-spinach-and-double-cheese-picture-id180817243?b=1&k=20&m=180817243&s=612x612&w=0&h=6bUah__3XPbM33qp4lWttirC93sr8WoDiCgBl3nWICQ=",
+    description: "lorem iplus is the this is the random text and you might want to add the detils of the pizza here. Like you can add the ingrediants or something about the pizza that might attract the clients with your pizza. Chicken pizza with cheese doping over",
+  },
+  {
+    id: 3545,
+    name: "Cheese Pizza",
+    varients: ["small", "medium", "large"],
+    prices: { small: 200, medium: 350, large: 400 },
+    category: "veg",
+    image:
+      "https://images.pexels.com/photos/5017806/pexels-photo-5017806.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description: "lorem iplus is the this is the random text and you might want to add the detils of the pizza here. Like you can add the ingrediants or something about the pizza that might attract the clients with your pizza. Chicken pizza with cheese doping over",
+  },
+  {
+    id: 465,
+    name: "Cheesy Pizza",
+    varients: ["small", "medium", "large"],
+    prices: { small: 200, medium: 350, large: 400 },
+    category: "veg",
+    image:
+      "https://images.pexels.com/photos/5640041/pexels-photo-5640041.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description: "lorem iplus is the this is the random text and you might want to add the detils of the pizza here. Like you can add the ingrediants or something about the pizza that might attract the clients with your pizza. Chicken pizza with cheese doping over",
+  },
+  {
+    id: 3235,
+    name: "Mutton Pizza",
+    varients: ["small", "medium", "large"],
+    prices: { small: 200, medium: 350, large: 400 },
+    category: "nonveg",
+    image:
+      "https://images.pexels.com/photos/5640043/pexels-photo-5640043.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description: "lorem iplus is the this is the random text and you might want to add the detils of the pizza here. Like you can add the ingrediants or something about the pizza that might attract the clients with your pizza. Button pizza with is made up of tasty goat meats",
+  },{
+    id: 6565,
+    name: "Raw Pizza",
+    varients: ["small", "medium", "large"],
+    prices: { small: 200, medium: 350, large: 400 },
+    category: "nonveg",
+    image:
+      "https://images.pexels.com/photos/4288047/pexels-photo-4288047.jpeg?auto=compress&cs=tinysrgb&w=600",
+    description: "lorem iplus is the this is the random text and you might want to add the detils of the pizza here. Like you can add the ingrediants or something about the pizza that might attract the clients with your pizza. Button pizza with is made up of tasty goat meats",
+  },
+  {
+    id: 6767,
+    name: "Tomato Pizza",
+    varients: ["small", "medium", "large"],
+    prices: { small: 200, medium: 350, large: 400 },
+    category: "veg",
+    image:
+    "https://media.istockphoto.com/photos/grilled-chicken-and-roasted-pepper-pizza-picture-id185280728?b=1&k=20&m=185280728&s=612x612&w=0&h=Or0TZUwRqBVM6syWJYaWoXV25i1Q-zAS3B2ax4HF0j4=",
+    description: "lorem iplus is the this is the random text and you might want to add the detils of the pizza here. Like you can add the ingrediants or something about the pizza that might attract the clients with your pizza. Button pizza with is made up of tasty goat meats",
+  }
+
+
+];
+
+export default Pizzas;
