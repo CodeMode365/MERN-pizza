@@ -2,10 +2,13 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 import { ImBin } from "react-icons/im";
+import { addToCart } from "../Redux/Actions/CartOperation";
 
 const Cart = () => {
   const cartState = useSelector((state) => state.Cart);
   const cartItems = cartState.cartItems;
+
+  const dispatch = useDispatch();
   return (
     <div>
       <div className="row justify-content-center">
@@ -31,28 +34,26 @@ const Cart = () => {
                   Quantity :{" "}
                   <AiFillPlusCircle
                     className="text-primary me-2 pointer"
-                    onClick={() => {
-                      element.quantity += 1;
-                    }}
+                  
+                    onClick={() => dispatch(addToCart(element, element.quantity+=1,element.varient))}
                   />
                   {element.quantity + " "}
                   <AiFillMinusCircle
                     className="text-danger me-2 pointer"
-                    onClick={() => {
-                      element.quantity -= 1;
-                    }}
+                    onClick={() => dispatch(addToCart(element, element.quantity-=1,element.varient))}
                   />
                 </h3>
-                <div  style={{ position: "absolute", top: "-0px", right: "10px" }}>
+                <div
+                  style={{ position: "absolute", top: "-0px", right: "10px" }}
+                >
                   <img
                     src={element.image}
                     alt={element.name}
                     height="100"
                     width="100"
                     className=" "
-                   
                   />
-                  <ImBin className="text-danger fs-4 pointer ms-3"/>
+                  <ImBin className="text-danger fs-4 pointer ms-3" />
                 </div>
                 <hr />
               </div>

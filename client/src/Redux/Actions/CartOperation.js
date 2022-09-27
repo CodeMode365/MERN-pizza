@@ -7,8 +7,8 @@ export const addToCart = (pizza, quantity, varient) => (dispatch, getState) => {
     image: pizza.image,
     varient: varient,
     quantity: quantity,
-    // price:pizza.prices[varient],
-    price: pizza.prices[varient],
+    price:pizza.prices[varient],
+    // price: pizza.prices[varient],
     amount: pizza.prices[varient] * quantity,
     // amount: this.price * quantity,
 
